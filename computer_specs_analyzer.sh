@@ -5,29 +5,22 @@ set -e
 library_path='modules'
 # extracting library
 
-
-
-
-[[ ! `whoami` == root ]] && echo 'error: require root privellege'
-
-
+[[ ! `whoami` == root ]] && echo 'error: require root privellege' && exit 1
 
 function toolbox_supported_command {
   # importing modules filename  to an array
-  array=(`ls  "$1" | xargs`)
-  echo ${array[@]}
+	array=( "$1"/*.sh )
+	echo "{$array[@]}"
 }
 
-
-echo "the argument is $1"
 case $1 in 
 	'ram')
 		ram_report 
     ;; 
   'list')
-		toolbox_supported_command "$library_path"
+		toolbox_supported_command "$library_path" # list files in module document
 	  ;;	
-	 *)
+	*)
 		echo 'error: this argument is not supported'
     ;;
 esac

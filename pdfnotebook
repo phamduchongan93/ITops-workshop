@@ -1,0 +1,23 @@
+#! /bin/bash
+
+# Description: this script will open pdf file along with a markdown editor
+
+# check if the program installed
+
+filename="$1"
+
+if [ ! -n "$filename" ] ; then
+  echo "You haven't entered your filename "
+  exit 1
+fi
+
+zathura "$filename" &> /dev/null  & 
+
+vim_filename=$(basename "$filename" .pdf)
+sleep 1s
+vim "$vim_filename.md"
+
+
+
+
+
