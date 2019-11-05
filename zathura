@@ -1,0 +1,16 @@
+#!/bin/bash
+# This script will open a program with argument while staying in the terminal
+# fasdf
+program_name=open "$ adf
+/usr/bin/zathura "$1" &> /dev/null & 
+
+
+function help {
+	echo " open <program_name> <arg1> filename"
+	echo " for example "
+}
+
+
+[[ "$1"=='help' ]] && help;
+
+
