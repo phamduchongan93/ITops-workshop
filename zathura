@@ -1,7 +1,8 @@
 #!/bin/bash
 # This script will open a program with argument while staying in the terminal
 # fasdf
-program_name=open "$ adf
+program_name=open "$1"
+path_name=$(which  $1)
 /usr/bin/zathura "$1" &> /dev/null & 
 
 

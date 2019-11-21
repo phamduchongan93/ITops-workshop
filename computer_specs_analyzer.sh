@@ -9,9 +9,13 @@ library_path='modules'
 
 function toolbox_supported_command {
   # importing modules filename  to an array
-	array=( "$1"/*.sh )
-	echo "{$array[@]}"
+	echo -e "The following command are supported: \n"
+	array=( "$1"/*) 	
+ 	"${array[*]}"
 }
+
+toolbox_supported_command  $library_path
+
 
 case $1 in 
 	'ram')
@@ -20,8 +24,24 @@ case $1 in
   'list')
 		toolbox_supported_command "$library_path" # list files in module document
 	  ;;	
-	*)
-		echo 'error: this argument is not supported'
-    ;;
-esac
+	'internet')
+		internet_check
+ 		# check internet connection
+		;;
+esac	
+
+# deploy multiple backup 
+
+array=(etc ~/.*)
+
+#function deploy_folders{
+#	mkdir -p "~/backup/"
+
+			
+#		;;
+#	*)
+#		echo -e "Error: This argument is not supported \nPlease type --help for more guide"
+
+#    ;;
+#esac
   
