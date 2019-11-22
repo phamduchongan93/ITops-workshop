@@ -1,0 +1,12 @@
+#!/bin/bash
+function internet_test {
+	test_server=1.1.1.1
+	if [ "$(ping -c 5 $test_server)" ]; then
+		# move on
+		if [ "$(nslookup $test_server)" ]; then
+			echo 'Success: you internet is working '
+		else
+			echo 'Fail: your internet is not working'
+		fi	
+	fi
+}
