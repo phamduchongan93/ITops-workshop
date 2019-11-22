@@ -2,11 +2,11 @@
 - This script is used to troubleshoot IT infrastructure.
 
 # Services # 
-- usb backup
-- configure backup
-- launching program via terminal
-- system info check
+- Usb Backup
+- Configure Backup
+- Launching program via terminal
+- System info check
 
 
 ## USB backup ##
-- This is a nice utility since It allow user to plug in a block device (usb) to your host and turn the usb to an img as backup. Later, you can wipe out the usb to use for other need.
+- This is a nice utility since It allows user to plug in a block device (usb). Then you can use the ITops utility to turn the usb into an img as backup. Beside, it also can be used for future need. Later, you can wipe out the usb to use for other need.
