@@ -2,7 +2,7 @@
 # Overview # 
 - This script is used to troubleshoot IT infrastructure.
 
-#![alt text](http://url/to/img.png)
+<!-- ![alt text](http://url/to/img.png) -->
 ```
 
 # Services # 
