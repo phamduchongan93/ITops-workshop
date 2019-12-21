@@ -1,3 +1,6 @@
+notifications:
+ email: true
+
 language: bash
 rvm:
  - 2.2
