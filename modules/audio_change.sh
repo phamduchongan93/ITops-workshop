@@ -31,6 +31,7 @@ function i3_conf {
 
 function help {
 	echo " usuage: audio_change <internal|bluetooth> "
+	echo "Where: "
 	echo -e " \t-i, --internal  \tSwitch audio to internal audio  "
 	echo -e " \t-b, --bluetooth \tSwicht audio to bluetooth headset " 
 }
