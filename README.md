@@ -1,7 +1,8 @@
-# Overview# 
+[![Build Status](https://travis-ci.com/phamduchongan93/ITops-workshop.svg?branch=master)](https://travis-ci.com/phamduchongan93/ITops-workshop)
+# Overview # 
 - This script is used to troubleshoot IT infrastructure.
 
-![alt text](http://url/to/img.png)
+<!-- ![alt text](http://url/to/img.png) -->
 ```
 
 # Services # 

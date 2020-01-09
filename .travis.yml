@@ -1,4 +1,7 @@
-language: ruby
+notifications:
+ email: true
+
+language: bash
 rvm:
  - 2.2
  - jruby
