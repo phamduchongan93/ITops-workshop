@@ -1,0 +1,4 @@
+Host $server_alias
+    HostName $hostname
+    Port 22
+    User $username

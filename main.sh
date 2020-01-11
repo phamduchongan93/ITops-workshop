@@ -1,4 +1,4 @@
-#!/bin/bash	
+#!/bin/env bats
 
 echo -e "\t\t ITops workbench "
 echo -e "\t 1. Display the disk space "
@@ -7,15 +7,23 @@ echo -e "\t 4. Display the "
 
 
 case  $option in 
-	1 )
+	1)
 		echo 'Displaying the disk usuage '	
-	
+	  lsblk -f
 		;;
-	2 )
+	2)
+		echo 'Display cpu usuage'
+		rootcheck
+		vmstat 5
+	  ;;
+	3)
+		echo ''
 		;;
-	3 )
+	4)
 		;;
-	4 )
+	*)
+		echo "invalid argument"
+		exit 1
 		;;
 esac
 	
