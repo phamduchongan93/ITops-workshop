@@ -1,8 +1,11 @@
 #!/bin/bash
-# Description: built to setup new server
+# Description: built to setup new server by sending ssh public key on the new server
 
+### variable ###
 public_key="$(whoami)/.ssh/id_rsa.pub"
 # copying public key to new server
+
+### function ### 
 ssh_copy() {
 	ssh-copy-id -i "$1" "$2@$3"
 }
@@ -40,5 +43,8 @@ else
 	hostname="$2"
 fi
 
-ssh-copy $public_key "$username" "$hostname"
-	
+### Main ###
+case "$1" in
+	-	
+	ssh-copy $public_key "$username" "$hostname"
+esac	
