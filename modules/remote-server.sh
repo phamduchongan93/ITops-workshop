@@ -45,6 +45,11 @@ fi
 
 ### Main ###
 case "$1" in
-	-	
-	ssh-copy $public_key "$username" "$hostname"
+	--copy-ssh)	
+		ssh-copy "$public_key" "$username@$hostname"
+    ssh -i "$public_key" user@host && echo 'success: the private and public key work' || echo 'fail: key authentication fail'
+		;;
+  *)
+	  echo 'fail: invalid input'
+		;;
 esac	
